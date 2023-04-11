@@ -9,3 +9,17 @@
 
 # 385916 -> yes
 # 123456 -> no
+num = str(input('Введите шестизначный номер билета: '))
+i_left = 0
+i_right = len(num) - 1
+sum_left = 0
+sum_right = 0
+while i_right > i_left:
+    sum_left += int (num[i_left])
+    sum_right += int (num[i_right])
+    i_left += 1
+    i_right -= 1
+if sum_left == sum_right:
+    print ('Вам попался счастливый билет!!!')
+else:
+    print ('Повезёт в следующий раз...')
